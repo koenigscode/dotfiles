@@ -1,0 +1,1 @@
+/home/michael/mount_nas.sh

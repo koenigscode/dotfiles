@@ -115,3 +115,10 @@ prompt pure
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+alias sshros='sshpass -p root ssh root@10.0.252.2 -X'
+alias sr='sshros'
+alias rs='sr'
+
+alias cura='~/cura.AppImage'
+alias studio='~/android-studio/bin/studio.sh'

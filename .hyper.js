@@ -43,7 +43,8 @@ module.exports = {
 
         // terminal background color
         // opacity is only supported on macOS
-        backgroundColor: '#25252F',
+        // backgroundColor: '#25252F',
+        backgroundColor: '#000000',
 
         // terminal selection color
         selectionColor: '#6C6AFB50',
@@ -138,7 +139,7 @@ module.exports = {
         webGLRenderer: true,
 
         // for advanced config flags please refer to https://hyper.is/#cfg
-        hyperBorder: {
+        /* hyperBorder: {
             animate: {
                 duration: '1s',  // default is 16s
               },
@@ -146,7 +147,7 @@ module.exports = {
             borderRadiusOuter: '4px',
             borderColors: ['#6C6AFB', '#4D4FF9'],
             // borderColors: ['#25252F', '#6C6AFB'],
-        }
+        } */
     },
 
     // a list of plugins to fetch and install from npm
@@ -155,7 +156,7 @@ module.exports = {
     //   `hyperpower`
     //   `@company/project`
     //   `project#1.0.1`
-    plugins: ['hyperborder', ],
+    // plugins: ['hyperborder', ],
 
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here

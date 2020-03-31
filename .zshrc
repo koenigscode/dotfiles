@@ -7,10 +7,8 @@ export ZSH="/home/michael/.oh-my-zsh"
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="agnoster"
-#ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME=""
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +68,7 @@ ZSH_THEME=""
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages colorize command-not-found)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,26 +97,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-### MY CONFIG ###
-
-#emulate -R ksh -c 'source ~/.bashrc'
-
-source ~/emsdk/emsdk_env.sh > /dev/null
-fpath+=('/home/michael/emsdk/node/12.9.1_64bit/lib/node_modules/pure-prompt/functions')
-
-export GOPATH=$HOME/work/code/go
-
-autoload -U promptinit; promptinit
-prompt pure
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-alias sshros='sshpass -p root ssh root@10.0.252.2 -X'
-alias sr='sshros'
-alias rs='sr'
-
-alias cura='~/cura.AppImage'
-alias studio='~/android-studio/bin/studio.sh'

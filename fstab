@@ -9,8 +9,6 @@
 UUID=85dc5403-f2ff-46f0-98f3-0a3b6caaccf1 /               ext4    errors=remount-ro 0       1
 # /boot/efi was on /dev/nvme0n1p2 during installation
 UUID=7651-62B0  /boot/efi       vfat    umask=0077      0       1
-# swap was on /dev/nvme0n1p8 during installation
-UUID=0e158edb-1174-4830-951c-835e0452082b	 none            swap    sw              0       0
 /dev/nvme0n1p4	/mnt/c	ntfs	defaults	0	0	
 /dev/nvme0n1p5	/mnt/d	ntfs	defaults	0	0	
 # 10.0.0.33:/volume1/homes	/mnt/nas/homes	nfs	rw  0	0

@@ -2,7 +2,7 @@ export ZSH="/home/michael/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
 
-plugins=(git)
+plugins=(git cp web-search z docker)
 
 source $ZSH/oh-my-zsh.sh
 

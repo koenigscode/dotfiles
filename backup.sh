@@ -10,4 +10,5 @@ cp ~/vim_setup.sh ./config/
 cp ~/.hyper.js ./config/
 cp -r ~/.config/terminator/ ./config/
 cp -r ~/.config/i3/ ./config/
+cp -r ~/.config/polybar/ ./config/
 cp ~/.alacritty.yml .

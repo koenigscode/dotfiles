@@ -3,8 +3,13 @@ window:
     x: 8
     y: 8
 
+background_opacity: 0.8
+
 font:
-  size: 6
+  size: 5.5
+  normal:
+      family: Fira Code
+      style: Regular
 colors:
   # Default colors
   primary:

@@ -10,7 +10,7 @@
 [profiles]
   [[default]]
     background_color = "#131313"
-    background_darkness = 0.97
+    background_darkness = 0.95
     background_type = transparent
     cursor_blink = False
     cursor_color = "#b9b9b9"
@@ -35,6 +35,16 @@
     foreground_color = "#d6dbe5"
     palette = "#1f1f1f:#f81118:#2dc55e:#ecba0f:#2a84d2:#4e5ab7:#1081d6:#d6dbe5:#d6dbe5:#de352e:#1dd361:#f3bd09:#1081d6:#5350b9:#0f7ddb:#ffffff"
     use_system_font = False
+  [[Seti]]
+    background_color = "#111213"
+    background_darkness = 0.97
+    background_type = transparent
+    cursor_blink = False
+    cursor_color = "#e3bf21"
+    font = Fira Code Medium 10
+    foreground_color = "#cacecd"
+    palette = "#323232:#c22832:#8ec43d:#e0c64f:#43a5d5:#8b57b5:#8ec43d:#eeeeee:#323232:#c22832:#8ec43d:#e0c64f:#43a5d5:#8b57b5:#8ec43d:#ffffff"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -44,4 +54,5 @@
     [[[window0]]]
       type = Window
       parent = ""
+			size = 900, 600
 [plugins]

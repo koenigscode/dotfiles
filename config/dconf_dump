@@ -1,3 +1,6 @@
+[apps/light-locker]
+idle-hint=false
+
 [apps/seahorse/listing]
 sidebar-width=170
 
@@ -7,8 +10,8 @@ width=600
 
 [apps/update-manager]
 first-run=false
-launch-count=116
-launch-time=int64 1587564520
+launch-count=117
+launch-time=int64 1587637566
 show-details=true
 window-height=400
 window-width=645
@@ -86,7 +89,7 @@ show-weekdate=true
 [org/gnome/desktop/input-sources]
 mru-sources=[('xkb', 'us+altgr-intl'), ('xkb', 'de')]
 show-all-sources=false
-sources=[('xkb', 'de'), ('xkb', 'us+altgr-intl')]
+sources=[('xkb', 'us+altgr-intl'), ('xkb', 'de')]
 xkb-options=@as []
 
 [org/gnome/desktop/interface]
@@ -193,7 +196,7 @@ application-id='virtualbox.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
-speed=-0.15789473684210531
+speed=-0.16058394160583944
 
 [org/gnome/desktop/peripherals/touchpad]
 click-method='none'
@@ -261,7 +264,7 @@ active-plugins=['docinfo', 'modelines', 'spell', 'time', 'filebrowser']
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/michael/.cache/.fr-0RDQuA'
+virtual-root='file:///home/michael/Downloads'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -271,7 +274,7 @@ bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
 size=(900, 700)
-state=43908
+state=4
 
 [org/gnome/gnome-system-monitor]
 cpu-colors=[(uint32 0, '#FF6E00'), (1, '#CB0C29'), (2, '#49A835'), (3, '#2D7DB3'), (4, '#f25915e815e8'), (5, '#f25915e815e8'), (6, '#f25915e815e8'), (7, '#f25915e815e8')]
@@ -376,7 +379,7 @@ show-trash=false
 name='ChromeOS-dark-compact-shell'
 
 [org/gnome/software]
-check-timestamp=int64 1587467558
+check-timestamp=int64 1587637592
 
 [org/gnome/system/location]
 enabled=false
@@ -413,8 +416,8 @@ use-theme-transparency=true
 visible-name='tmux'
 
 [org/gtk/settings/color-chooser]
-custom-colors=[(0.77254901960784317, 0.78431372549019607, 0.77647058823529413, 1.0), (0.8901960784313725, 0.28235294117647058, 0.35294117647058826, 1.0), (0.8901960784313725, 0.28235294117647058, 0.35294117647058831, 1.0), (0.15686274509803921, 0.16470588235294117, 0.1803921568627451, 1.0), (0.094117647058823528, 0.10588235294117647, 0.11764705882352941, 1.0), (0.11372549019607843, 0.12156862745098039, 0.12941176470588237, 1.0), (0.75294117647058822, 0.74509803921568629, 0.74901960784313726, 1.0), (0.78431372549019607, 0.0, 0.011764705882352941, 1.0)]
-selected-color=(true, 0.33333333333333331, 0.3411764705882353, 0.32549019607843138, 1.0)
+custom-colors=[(0.074509803921568626, 0.074509803921568626, 0.074509803921568626, 1.0), (0.77254901960784317, 0.78431372549019607, 0.77647058823529413, 1.0), (0.8901960784313725, 0.28235294117647058, 0.35294117647058826, 1.0), (0.8901960784313725, 0.28235294117647058, 0.35294117647058831, 1.0), (0.15686274509803921, 0.16470588235294117, 0.1803921568627451, 1.0), (0.094117647058823528, 0.10588235294117647, 0.11764705882352941, 1.0), (0.11372549019607843, 0.12156862745098039, 0.12941176470588237, 1.0), (0.75294117647058822, 0.74509803921568629, 0.74901960784313726, 1.0)]
+selected-color=(true, 0.074509803921568626, 0.074509803921568626, 0.074509803921568626, 1.0)
 
 [org/gtk/settings/file-chooser]
 date-format='regular'

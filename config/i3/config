@@ -194,12 +194,14 @@ bindsym $mod+q kill
 
 exec --no-startup-id unclutter &
 
-gaps inner 10
-gaps outer 10
+smart_gaps on
+gaps inner 5
+gaps outer 0
 for_window [class="^.*"] border pixel 2
 font pango:Fira Code Regular 8
 exec --no-startup-id feh /home/michael/Pictures/Wallpapers/omid-armin-D8z5O2a1lYQ-unsplash.jpg --bg-fill
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-exec --no-startup-id compton -f -D 2
+exec --no-startup-id compton -f -D 2 --blur-background
+exec_always --no-startup-id ~/.config/i3/autotiling.py

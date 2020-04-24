@@ -27,6 +27,12 @@ version='1.5.21'
 [desktop/ibus/panel/emoji]
 favorites=['⛪']
 
+[org/blueman/general]
+window-properties=[931, 1001, 965, 20]
+
+[org/blueman/transfer]
+shared-path='/home/michael/Downloads'
+
 [org/gnome/baobab/ui]
 window-size=(960, 600)
 window-state=43908

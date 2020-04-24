@@ -1,0 +1,58 @@
+URxvt*depth: 32
+
+*background:   [85]#282a36
+*foreground:   #eff0eb
+*cursorColor:  #9aedfe
+
+*color0:      #33303b
+*color8:      #4f4b58
+*color1:      #ff5c57
+*color9:      #ff5c57
+*color2:      #5af78e
+*color10:     #5af78e
+*color3:      #f3f99d
+*color11:     #f3f99d
+*color4:      #57c7ff
+*color12:     #57c7ff
+*color5:      #ff6ac1
+*color13:     #ff6ac1
+*color6:      #9aedfe
+*color14:     #9aedfe
+*color7:      #eff0eb
+*color15:     #eff0eb
+
+!! Common Keybinds for Navigations
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
+
+!! Copy Paste & Other Extensions
+URxvt.keysym.Control-Meta-c: builtin-string:
+URxvt.keysym.Control-Meta-v: builtin-string:
+
+URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
+URxvt.copyCommand: xclip -i -selection clipboard
+URxvt.pasteCommand: xclip -o -selection clipboard
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+!!URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+!!URxvt.keysym.M-Escape: perl:keyboard-select:activate
+!!URxvt.keysym.M-s: perl:keyboard-select:search
+!!URxvt.keysym.M-u: perl:url-select:select_next
+!!URxvt.urlLauncher: firefox
+!!URxvt.underlineURLs: true
+!!URxvt.urlButton: 1
+
+URxvt.scrollBar: false
+
+*.font: xft:FiraCode:style=Regular:size=9.5
+*.boldFont: xft:FiraCode:style=Bold:size=9.5
+*.italicFont: xft:FiraCode:style=Italic:size=9.5
+*.boldItalicFont: xft:FiraCode:style=Bold Italic:size=9.5
+
+URxvt.internalBorder: 14
+
+URxvt*saveLines: 12000

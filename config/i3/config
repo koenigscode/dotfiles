@@ -40,7 +40,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -197,7 +197,7 @@ exec --no-startup-id unclutter &
 smart_gaps on
 gaps inner 5
 gaps outer 0
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 font pango:Fira Code Regular 8
 exec --no-startup-id feh /home/michael/Pictures/Wallpapers/omid-armin-D8z5O2a1lYQ-unsplash.jpg --bg-fill
 

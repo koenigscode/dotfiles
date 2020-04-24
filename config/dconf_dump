@@ -28,7 +28,10 @@ version='1.5.21'
 favorites=['⛪']
 
 [org/blueman/general]
-window-properties=[931, 1001, 965, 20]
+window-properties=[954, 1037, 962, 4]
+
+[org/blueman/plugins/recentconns]
+recent-connections='eNp9kE1O20AcxU1KoDWlhUILDVBcoG1KMbLVRHFmR8xHJJCFxMYbFpN4yIyUxH3+YIfUkTpcoVfoDbhCN91V4jYI22FVNczir9G892bm/b6XjrVzaNUrTFT9aU3TaEC/JSxCqRt00lg/SyIx7Ol44s9nouWSeo3YdeI6ZH+P1BqYVChLTD1Eg4jFMab5yF1zidMg9X1y2CLuIWm28FThmYTul3N3X9AYMw/ekwOzFcbM8FyjYVlG+xTPFWYlXviTmSq64RAvM6ueB9NAhGaXRgHmFOYlXhWeIR0wLBQfaTMaxCzBYiGkqQjwOgtv5Q2yZduWY+Yb086Hkw/Lcqz6RbPztXbRwRuFJYnlIp2I7Nq3R3u3v/7e/Fyn/lR2FrBL0WWoeEWRgUjYACte8XQvFr0h7WP1WEuvsFblJT4O3TuFdQmDj8f1XmFDYpOPh7Sl8EHiI/8Pm08KVYnPfMGfyYQzFgnaN07DKME2/4eG/SiNLwo7EiYfQfj94+4Pr3h8xeN5R3aN3d17l8SWaA=='
 
 [org/blueman/transfer]
 shared-path='/home/michael/Downloads'

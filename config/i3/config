@@ -185,19 +185,19 @@ bindsym XF86AudioRaiseVolume exec amixer -q -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse sset Master 5%-
 bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 bindsym Print exec flameshot gui
 
 bindsym $mod+q kill
 
-exec --no-startup-id unclutter &
+# exec --no-startup-id unclutter &
 
 smart_gaps on
 gaps inner 5
 gaps outer 0
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 
 font pango:Fira Code Regular 8
 exec --no-startup-id feh /home/michael/Pictures/Wallpapers/omid-armin-D8z5O2a1lYQ-unsplash.jpg --bg-fill
 

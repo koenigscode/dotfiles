@@ -10,15 +10,15 @@ width=600
 
 [apps/update-manager]
 first-run=false
-launch-count=117
-launch-time=int64 1587637566
+launch-count=289
+launch-time=int64 1611211847
 show-details=true
-window-height=400
+window-height=484
 window-width=645
 
 [com/ubuntu/update-notifier]
 regular-auto-launch-interval=14
-release-check-time=uint32 1586722838
+release-check-time=uint32 1610540295
 
 [desktop/ibus/general]
 preload-engines=['xkb:us::eng']
@@ -28,16 +28,20 @@ version='1.5.21'
 favorites=['⛪']
 
 [org/blueman/general]
-window-properties=[954, 1037, 962, 4]
+window-properties=[952, 1035, 962, 4]
+
+[org/blueman/plugins/powermanager]
+auto-power-on=@mb true
 
 [org/blueman/plugins/recentconns]
 recent-connections='eNp9kE1O20AcxU1KoDWlhUILDVBcoG1KMbLVRHFmR8xHJJCFxMYbFpN4yIyUxH3+YIfUkTpcoVfoDbhCN91V4jYI22FVNczir9G892bm/b6XjrVzaNUrTFT9aU3TaEC/JSxCqRt00lg/SyIx7Ol44s9nouWSeo3YdeI6ZH+P1BqYVChLTD1Eg4jFMab5yF1zidMg9X1y2CLuIWm28FThmYTul3N3X9AYMw/ekwOzFcbM8FyjYVlG+xTPFWYlXviTmSq64RAvM6ueB9NAhGaXRgHmFOYlXhWeIR0wLBQfaTMaxCzBYiGkqQjwOgtv5Q2yZduWY+Yb086Hkw/Lcqz6RbPztXbRwRuFJYnlIp2I7Nq3R3u3v/7e/Fyn/lR2FrBL0WWoeEWRgUjYACte8XQvFr0h7WP1WEuvsFblJT4O3TuFdQmDj8f1XmFDYpOPh7Sl8EHiI/8Pm08KVYnPfMGfyYQzFgnaN07DKME2/4eG/SiNLwo7EiYfQfj94+4Pr3h8xeN5R3aN3d17l8SWaA=='
 
 [org/blueman/transfer]
-shared-path='/home/michael/Downloads'
+shared-path=''
 
 [org/gnome/baobab/ui]
-window-size=(960, 600)
+active-chart='rings'
+window-size=(1336, 600)
 window-state=43908
 
 [org/gnome/calculator]
@@ -55,12 +59,18 @@ target-units='radian'
 window-position=(1252, 249)
 word-size=64
 
+[org/gnome/calendar]
+active-view='month'
+window-maximized=true
+window-position=(0, 32)
+window-size=(1920, 970)
+
 [org/gnome/control-center]
-last-panel='region'
+last-panel='bluetooth'
 
 [org/gnome/deja-dup]
 backend='google'
-prompt-check='2020-04-05T18:00:54.272718Z'
+prompt-check='2021-01-13T10:41:16+00'
 
 [org/gnome/deja-dup/file]
 migrated=true
@@ -88,9 +98,9 @@ translate=true
 [org/gnome/desktop/background]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/michael/Pictures/Wallpapers/omid-armin-D8z5O2a1lYQ-unsplash.jpg'
-primary-color='#000000'
-secondary-color='#000000'
+picture-uri='file:///home/michael/.local/share/backgrounds/2020-05-08-14-30-22-ubuntu-linux-minimalism-3445.jpg'
+primary-color='#000000000000'
+secondary-color='#000000000000'
 
 [org/gnome/desktop/calendar]
 show-weekdate=true
@@ -99,7 +109,7 @@ show-weekdate=true
 mru-sources=[('xkb', 'us+altgr-intl'), ('xkb', 'de')]
 show-all-sources=false
 sources=[('xkb', 'us+altgr-intl'), ('xkb', 'de')]
-xkb-options=@as []
+xkb-options=['grp_led:scroll']
 
 [org/gnome/desktop/interface]
 clock-show-seconds=false
@@ -108,13 +118,14 @@ cursor-theme='Yaru'
 enable-hot-corners=true
 gtk-enable-primary-paste=false
 gtk-im-module='ibus'
-gtk-theme='ChromeOS-dark-compact'
+gtk-theme='Arc-Darker'
 icon-theme='Tela'
 show-battery-percentage=true
 toolkit-accessibility=false
 
 [org/gnome/desktop/notifications]
-application-children=['update-manager', 'firefox', 'org-gnome-software', 'org-gnome-tweaks', 'spotify-spotify', 'gnome-network-panel', 'gnome-power-panel', 'telegramdesktop', 'org-gnome-nautilus', 'hyper', 'libreoffice-writer', 'code-code', 'apport-gtk', 'gnome-shell-extension-prefs', 'org-gnome-terminal', 'postman-postman', 'org-remmina-remmina', 'org-gnome-dejadup', 'virtualbox', 'org-gnome-baobab', 'google-chrome', 'discord', 'cura', 'gnome-printers-panel', 'jetbrains-toolbox', 'org-gnome-fileroller', 'teams', 'sqlitebrowser', 'org-gnome-diskutility']
+application-children=['update-manager', 'firefox', 'org-gnome-software', 'org-gnome-tweaks', 'spotify-spotify', 'gnome-network-panel', 'gnome-power-panel', 'telegramdesktop', 'org-gnome-nautilus', 'hyper', 'libreoffice-writer', 'code-code', 'apport-gtk', 'gnome-shell-extension-prefs', 'org-gnome-terminal', 'postman-postman', 'org-remmina-remmina', 'org-gnome-dejadup', 'virtualbox', 'org-gnome-baobab', 'google-chrome', 'discord', 'cura', 'gnome-printers-panel', 'jetbrains-toolbox', 'org-gnome-fileroller', 'teams', 'sqlitebrowser', 'org-gnome-diskutility', 'io-github-wxmaxima-developers-wxmaxima', 'jetbrains-idea', 'gnome-control-center', 'org-gnome-extensions-desktop', 'org-gnome-gedit', 'snap-store-ubuntu-software-local-file', 'discord-discord', 'flameshot', 'gimp', 'spotify', 'deepin-picker', 'org-gnome-shell-extensions', 'wireshark']
+show-banners=true
 
 [org/gnome/desktop/notifications/application/apport-gtk]
 application-id='apport-gtk.desktop'
@@ -125,11 +136,26 @@ application-id='code_code.desktop'
 [org/gnome/desktop/notifications/application/cura]
 application-id='cura.desktop'
 
+[org/gnome/desktop/notifications/application/deepin-picker]
+application-id='deepin-picker.desktop'
+
+[org/gnome/desktop/notifications/application/discord-discord]
+application-id='discord_discord.desktop'
+
 [org/gnome/desktop/notifications/application/discord]
 application-id='discord.desktop'
 
 [org/gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
+
+[org/gnome/desktop/notifications/application/flameshot]
+application-id='flameshot.desktop'
+
+[org/gnome/desktop/notifications/application/gimp]
+application-id='gimp.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-control-center]
+application-id='gnome-control-center.desktop'
 
 [org/gnome/desktop/notifications/application/gnome-network-panel]
 application-id='gnome-network-panel.desktop'
@@ -149,6 +175,12 @@ application-id='google-chrome.desktop'
 [org/gnome/desktop/notifications/application/hyper]
 application-id='hyper.desktop'
 
+[org/gnome/desktop/notifications/application/io-github-wxmaxima-developers-wxmaxima]
+application-id='io.github.wxmaxima_developers.wxMaxima.desktop'
+
+[org/gnome/desktop/notifications/application/jetbrains-idea]
+application-id='jetbrains-idea.desktop'
+
 [org/gnome/desktop/notifications/application/jetbrains-toolbox]
 application-id='jetbrains-toolbox.desktop'
 
@@ -164,11 +196,20 @@ application-id='org.gnome.DejaDup.desktop'
 [org/gnome/desktop/notifications/application/org-gnome-diskutility]
 application-id='org.gnome.DiskUtility.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-extensions-desktop]
+application-id='org.gnome.Extensions.desktop.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-fileroller]
 application-id='org.gnome.FileRoller.desktop'
 
+[org/gnome/desktop/notifications/application/org-gnome-gedit]
+application-id='org.gnome.gedit.desktop'
+
 [org/gnome/desktop/notifications/application/org-gnome-nautilus]
 application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-shell-extensions]
+application-id='org.gnome.Shell.Extensions.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-software]
 application-id='org.gnome.Software.desktop'
@@ -185,8 +226,15 @@ application-id='org.remmina.Remmina.desktop'
 [org/gnome/desktop/notifications/application/postman-postman]
 application-id='postman_postman.desktop'
 
+[org/gnome/desktop/notifications/application/snap-store-ubuntu-software-local-file]
+application-id='snap-store_ubuntu-software-local-file.desktop'
+
 [org/gnome/desktop/notifications/application/spotify-spotify]
 application-id='spotify_spotify.desktop'
+
+[org/gnome/desktop/notifications/application/spotify]
+application-id='spotify.desktop'
+show-banners=false
 
 [org/gnome/desktop/notifications/application/sqlitebrowser]
 application-id='sqlitebrowser.desktop'
@@ -202,6 +250,9 @@ application-id='update-manager.desktop'
 
 [org/gnome/desktop/notifications/application/virtualbox]
 application-id='virtualbox.desktop'
+
+[org/gnome/desktop/notifications/application/wireshark]
+application-id='wireshark.desktop'
 
 [org/gnome/desktop/peripherals/mouse]
 accel-profile='flat'
@@ -220,15 +271,20 @@ report-technical-problems=true
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/michael/Pictures/Wallpapers/omid-armin-D8z5O2a1lYQ-unsplash.jpg'
-primary-color='#000000'
-secondary-color='#000000'
+picture-uri='file:///home/michael/.local/share/backgrounds/2020-05-08-14-30-22-ubuntu-linux-minimalism-3445.jpg'
+primary-color='#000000000000'
+secondary-color='#000000000000'
+
+[org/gnome/desktop/search-providers]
+sort-order=['org.gnome.Contacts.desktop', 'org.gnome.Documents.desktop', 'org.gnome.Nautilus.desktop']
 
 [org/gnome/desktop/session]
 idle-delay=uint32 0
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=false
+event-sounds=true
+theme-name='__custom'
 
 [org/gnome/desktop/wm/keybindings]
 close=['<Super>w']
@@ -244,8 +300,11 @@ theme='Sweet'
 background-color='rgb(0,0,0)'
 use-background-color=true
 
+[org/gnome/evince]
+document-directory=@ms 'file:///home/michael/Desktop'
+
 [org/gnome/evince/default]
-window-ratio=(1.0078613182826044, 0.70553021664766247)
+window-ratio=(1.6131270313541408, 0.60634328358208955)
 
 [org/gnome/evolution-data-server]
 migrated=true
@@ -257,15 +316,15 @@ skip-newer=false
 
 [org/gnome/file-roller/listing]
 list-mode='as-folder'
-name-column-width=250
+name-column-width=429
 show-path=false
 sort-method='name'
 sort-type='ascending'
 
 [org/gnome/file-roller/ui]
 sidebar-width=200
-window-height=963
-window-width=1878
+window-height=970
+window-width=942
 
 [org/gnome/gedit/plugins]
 active-plugins=['docinfo', 'modelines', 'spell', 'time', 'filebrowser']
@@ -273,7 +332,7 @@ active-plugins=['docinfo', 'modelines', 'spell', 'time', 'filebrowser']
 [org/gnome/gedit/plugins/filebrowser]
 root='file:///'
 tree-view=true
-virtual-root='file:///home/michael/Downloads'
+virtual-root='file:///home/michael/Downloads/Telegram%20Desktop'
 
 [org/gnome/gedit/preferences/ui]
 show-tabs-mode='auto'
@@ -282,21 +341,23 @@ show-tabs-mode='auto'
 bottom-panel-size=140
 side-panel-active-page='GeditWindowDocumentsPanel'
 side-panel-size=200
-size=(900, 700)
-state=4
+size=(960, 975)
+state=87168
 
 [org/gnome/gnome-system-monitor]
 cpu-colors=[(uint32 0, '#FF6E00'), (1, '#CB0C29'), (2, '#49A835'), (3, '#2D7DB3'), (4, '#f25915e815e8'), (5, '#f25915e815e8'), (6, '#f25915e815e8'), (7, '#f25915e815e8')]
-current-tab='disks'
+current-tab='resources'
 graph-update-interval=1000
-maximized=true
+maximized=false
 show-dependencies=false
 show-whose-processes='all'
-window-state=(1920, 972, 0, 28)
+window-state=(820, 765, 901, 204)
 
 [org/gnome/gnome-system-monitor/disktreenew]
+col-0-visible=true
+col-0-width=231
 col-6-visible=true
-col-6-width=0
+col-6-width=279
 
 [org/gnome/gnome-system-monitor/proctree]
 col-14-visible=false
@@ -326,6 +387,8 @@ y=135
 
 [org/gnome/mutter]
 center-new-windows=true
+dynamic-workspaces=true
+workspaces-only-on-primary=true
 
 [org/gnome/nautilus/compression]
 default-compression-format='zip'
@@ -342,18 +405,29 @@ search-filter-time-type='last_modified'
 search-view='list-view'
 
 [org/gnome/nautilus/window-state]
-initial-size=(1878, 963)
+initial-size=(1054, 474)
 maximized=false
 
 [org/gnome/nm-applet/eap/7cd324e7-5251-440e-90a6-faf41f1bb885]
 ignore-ca-cert=false
 ignore-phase2-ca-cert=false
 
+[org/gnome/nm-applet/eap/d3c88fcb-6632-4f84-a87c-19b64571067e]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
 [org/gnome/settings-daemon/peripherals/touchscreen]
 orientation-lock=true
 
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=false
+night-light-schedule-automatic=false
+night-light-schedule-to=6.0
+night-light-temperature=uint32 2229
+
 [org/gnome/settings-daemon/plugins/media-keys]
 custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+terminal=['<Super>Return']
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>c'
@@ -369,26 +443,34 @@ sleep-inactive-ac-type='nothing'
 hinting='slight'
 
 [org/gnome/shell]
-app-picker-view=uint32 1
+app-picker-view=uint32 0
+command-history=['r']
 disabled-extensions=['place.windows.in.center@example.com']
-enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com']
-favorite-apps=['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'spotify_spotify.desktop', 'code_code.desktop', 'telegramdesktop.desktop', 'discord.desktop']
+enabled-extensions=['user-theme@gnome-shell-extensions.gcampax.github.com', 'disable-workspace-switcher-popup@github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'cast-to-tv@rafostar.github.com', 'cast-to-tv-desktop-addon@rafostar.github.com']
+favorite-apps=['google-chrome.desktop', 'org.gnome.Nautilus.desktop', 'spotify.desktop', 'code_code.desktop', 'telegramdesktop.desktop', 'discord.desktop', 'teams.desktop']
 had-bluetooth-devices-setup=true
 
+[org/gnome/shell/extensions/cast-to-tv]
+chromecast-devices='[{"name":"756a33bd-b08a-1d1c-57a5-8114b213c549.local","friendlyName":"Home","ip":""},{"name":"24d6b3e9-b32e-6acb-8e44-72083307860d.local","friendlyName":"Michi Chromecast","ip":""}]'
+chromecast-name='24d6b3e9-b32e-6acb-8e44-72083307860d.local'
+service-wanted=false
+
 [org/gnome/shell/extensions/dash-to-dock]
-dash-max-icon-size=20
+dash-max-icon-size=16
 dock-fixed=true
-dock-position='LEFT'
+dock-position='BOTTOM'
+preferred-monitor=0
 
 [org/gnome/shell/extensions/desktop-icons]
 show-home=false
 show-trash=false
 
 [org/gnome/shell/extensions/user-theme]
-name='ChromeOS-dark-compact-shell'
+name='Arc-Dark'
 
 [org/gnome/software]
-check-timestamp=int64 1587637592
+check-timestamp=int64 1611211704
+online-updates-timestamp=int64 1611211706
 
 [org/gnome/system/location]
 enabled=false
@@ -434,13 +516,33 @@ location-mode='path-bar'
 show-hidden=true
 show-size-column=true
 show-type-column=true
-sidebar-width=204
+sidebar-width=258
 sort-column='modified'
 sort-directories-first=true
-sort-order='ascending'
+sort-order='descending'
 type-format='category'
-window-position=(359, 61)
-window-size=(1203, 902)
+window-position=(398, 105)
+window-size=(1124, 822)
+
+[org/yorba/shotwell/preferences/ui]
+display-basic-properties=true
+display-extended-properties=false
+display-photo-comments=false
+display-photo-ratings=true
+display-photo-tags=true
+display-photo-titles=false
+display-search-bar=false
+display-sidebar=true
+events-sort-ascending=false
+library-photos-sort-ascending=false
+library-photos-sort-by=2
+show-welcome-dialog=false
+sidebar-position=180
+
+[org/yorba/shotwell/preferences/window]
+library-height=768
+library-maximize=false
+library-width=1024
 
 [system/proxy]
 mode='none'

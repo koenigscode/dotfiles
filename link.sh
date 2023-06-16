@@ -1,2 +1,3 @@
-ln -s ~/.config/nvim .
+rm -rf ./nvim
+cp -r ~/.config/nvim .
 

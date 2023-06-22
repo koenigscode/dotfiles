@@ -20,7 +20,8 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
--- vim.opt.termguicolors = true
+vim.opt.termguicolors = true
+vim.opt.background = "dark"
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -29,4 +30,13 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 -- vim.opt.colorcolumn = "80"
+
+vim.o.termguicolors = true
+vim.o.t_Co = 256
+vim.g.t_8f = "[[38;2;%lu;%lu;%lum"
+vim.g.t_8b = "[[48;2;%lu;%lu;%lum"
+vim.g.neovide_refresh_rate = 60
+
+vim.cmd('let &t_8f = "\\<Esc>[38;2;%lu;%lu;%lum"')
+vim.cmd('let &t_8b = "\\<Esc>[48;2;%lu;%lu;%lum"')
 

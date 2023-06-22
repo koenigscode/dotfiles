@@ -1,5 +1,3 @@
-Based on https://github.com/ThePrimeagen/init.lua
-
 ### ThePrimeagen's init.lua
 Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep).
 

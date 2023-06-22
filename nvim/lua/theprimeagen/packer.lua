@@ -33,6 +33,8 @@ return require('packer').startup(function(use)
         end
     })
 
+    use("tpope/vim-commentary")
+
     use {
         "folke/which-key.nvim",
         config = function()
@@ -42,6 +44,36 @@ return require('packer').startup(function(use)
                 -- your configuration comes here
                 -- or leave it empty to use the default settings
                 -- refer to the configuration section below
+            }
+        end
+    }
+
+    use {
+  "kyazdani42/nvim-tree.lua",
+  config = function()
+    require("nvim-tree").setup {
+      sort_by = "case_sensitive",
+      view = {
+        width = 30,
+      },
+      renderer = {
+        group_empty = true,
+      },
+      filters = {
+        dotfiles = true,
+      },
+    }
+  end
+}
+
+    use("nvim-tree/nvim-web-devicons")
+
+    use {
+        'rmagatti/auto-session',
+        config = function()
+            require("auto-session").setup {
+                log_level = "error",
+                auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
             }
         end
     }

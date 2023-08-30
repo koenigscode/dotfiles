@@ -27,6 +27,7 @@ export GEM_HOME=/Users/koenig/.gem
 export PATH="$GEM_HOME/bin:$PATH"
 export PATH="$PATH:/Users/koenig/Library/Python/3.9/bin"
 export PATH="$PATH:/Applications/Alacritty.app/Contents/MacOS"
+export PATH="$HOME/.local/bin:$PATH"
 
 source /opt/homebrew/etc/profile.d/z.sh
 printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh" }}\x9c'

@@ -15,9 +15,12 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], {desc = "Yank selection to system clipboard"})
+vim.keymap.set({ "n", "v" }, "<leader>d", [["+dd]], {desc = "Cut selection to system clipboard"})
 vim.keymap.set("n", "<leader>Y", [["+Y]], {desc = "Yank line to system clipboard"})
 
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete to black hole register" })
+vim.keymap.set("n", "<leader>msa", "gg0vG$", { desc = "Select all" })
+
+-- vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete to black hole register" })
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
@@ -42,7 +45,7 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end, { desc = "Source current file" })
 
-vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true, desc = 'Switch to left window' })
-vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true, desc = 'Switch to below window' })
-vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true, desc = 'Switch to above window' })
-vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true, desc = 'Switch to right window' })
+vim.keymap.set('n', '<leader>wh', '<C-w>h', { noremap = true, silent = true, desc = 'Switch to left window' })
+vim.keymap.set('n', '<leader>wj', '<C-w>j', { noremap = true, silent = true, desc = 'Switch to below window' })
+vim.keymap.set('n', '<leader>wk', '<C-w>k', { noremap = true, silent = true, desc = 'Switch to above window' })
+vim.keymap.set('n', '<leader>wl', '<C-w>l', { noremap = true, silent = true, desc = 'Switch to right window' })

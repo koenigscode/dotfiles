@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    use('jose-elias-alvarez/null-ls.nvim')
+    use('MunifTanjim/prettier.nvim')
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         -- or                            , branch = '0.1.x',
@@ -49,22 +52,22 @@ return require('packer').startup(function(use)
     }
 
     use {
-  "kyazdani42/nvim-tree.lua",
-  config = function()
-    require("nvim-tree").setup {
-      sort_by = "case_sensitive",
-      view = {
-        width = 30,
-      },
-      renderer = {
-        group_empty = true,
-      },
-      filters = {
-        dotfiles = true,
-      },
+        "kyazdani42/nvim-tree.lua",
+        config = function()
+            require("nvim-tree").setup {
+                sort_by = "case_sensitive",
+                view = {
+                    width = 30,
+                },
+                renderer = {
+                    group_empty = true,
+                },
+                filters = {
+                    dotfiles = true,
+                },
+            }
+        end
     }
-  end
-}
 
     use("nvim-tree/nvim-web-devicons")
 
@@ -78,8 +81,6 @@ return require('packer').startup(function(use)
         end
     }
 
-    use('ThePrimeagen/vim-be-good')
-
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -87,12 +88,10 @@ return require('packer').startup(function(use)
             ts_update()
         end, }
     use("nvim-treesitter/playground")
+    use("nvim-treesitter/nvim-treesitter-context");
     use("theprimeagen/harpoon")
-    use("theprimeagen/refactoring.nvim")
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
-    use("nvim-treesitter/nvim-treesitter-context");
-
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -116,8 +115,5 @@ return require('packer').startup(function(use)
         }
     }
 
-    use("folke/zen-mode.nvim")
     use("github/copilot.vim")
-    use("eandrju/cellular-automaton.nvim")
-    use("laytan/cloak.nvim")
 end)

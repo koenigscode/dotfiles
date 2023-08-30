@@ -1,3 +1,3 @@
-vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
-  {silent = true, noremap = true, desc = "Trouble quickfix"}
+vim.keymap.set("n", "<leader>fq", "<cmd>TroubleToggle quickfix<cr>",
+    { silent = true, noremap = true, desc = "Toggle trouble quickfix" }
 )

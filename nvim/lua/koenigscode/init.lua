@@ -1,9 +1,9 @@
-require("theprimeagen.set")
-require("theprimeagen.remap")
-require("theprimeagen.packer")
+require("koenigscode.set")
+require("koenigscode.remap")
+require("koenigscode.packer")
 
 local augroup = vim.api.nvim_create_augroup
-local ThePrimeagenGroup = augroup('ThePrimeagen', {})
+local koenigscodeGroup = augroup('koenigscode', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -24,7 +24,7 @@ autocmd('TextYankPost', {
 })
 
 autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
+    group = koenigscodeGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })

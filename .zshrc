@@ -28,8 +28,12 @@ export PATH="$GEM_HOME/bin:$PATH"
 export PATH="$PATH:/Users/koenig/Library/Python/3.9/bin"
 export PATH="$PATH:/Applications/Alacritty.app/Contents/MacOS"
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$PATH:/Users/koenig/.mix/escripts"
+export PATH="$PATH:/Users/koenig/.config"
 
 source /opt/homebrew/etc/profile.d/z.sh
 printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh" }}\x9c'
 [ -f "/Users/koenig/.ghcup/env" ] && source "/Users/koenig/.ghcup/env" # ghcup-env
 
+# Uni sw arch course
+export CLASSPATH=/Users/koenig/code/uni/a4-group-22/microservices/mysql-connector-j-8.0.33.jar:/Users/koenig/code/uni/a4-group-22/microservices

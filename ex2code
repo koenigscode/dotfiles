@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Opens downloaded exercism exercise in VS Code
+
+# Usage example:
+# exercism download --track=elixir --exercise=freelancer-rates | ex2code
+
+# Make sure to add this file to your PATH
+
+while read -r line; do
+  downloaded_path=$(echo "$line" | grep -oE '/Users/[^[:space:]]+')
+  code "$downloaded_path" --reuse-window
+done

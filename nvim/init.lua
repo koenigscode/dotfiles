@@ -1,2 +1,2 @@
-require("koenigscode")
-
+require("koenigscode.core")
+require("koenigscode.lazy")

@@ -1,3 +1,4 @@
+-- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/lazy-loading-with-lazy-nvim.md
 return {
     {
         'VonHeikemen/lsp-zero.nvim',
@@ -66,7 +67,7 @@ return {
             end)
 
             require('mason-lspconfig').setup({
-                ensure_installed = {"elixir", "html", "javascript"},
+                ensure_installed = { "elixirls", "html" },
                 handlers = {
                     lsp_zero.default_setup,
                 }

@@ -16,6 +16,12 @@ alias editvim="cd ~/.config/nvim && vim ."
 alias editzsh="vim ~/.zshrc"
 alias lg='lazygit'
 
+gcc-run() {
+  local filename="${1%.c}"
+  gcc "$1" -o "$filename.out" && ./"$filename.out"
+}
+
+
 #####
 # local config (PATH, sourcing files, etc)
 #####

@@ -18,21 +18,42 @@ return {
     config = function()
         local wk = require("which-key")
         wk.register({
+            ["h"] = "which_key_ignore",
+            ["j"] = "which_key_ignore",
+            ["k"] = "which_key_ignore",
+            ["l"] = "which_key_ignore",
+            ["b"] = "which_key_ignore",
+            ["w"] = "which_key_ignore",
+            ["e"] = "which_key_ignore",
+            ["c"] = "which_key_ignore",
+            ["f"] = "which_key_ignore",
+            ["F"] = "which_key_ignore",
+            ["G"] = "which_key_ignore",
+            ["d"] = "which_key_ignore",
+            ["y"] = "which_key_ignore",
+            ["0"] = "which_key_ignore",
+            ["$"] = "which_key_ignore",
             ["<leader>"] = {
                 s = {
-                    name = "Search",
+                    name = "[S]earch",
                 },
                 e = {
-                    name = "Explorer"
+                    name = "[E]xplorer"
                 },
                 b = {
-                    name = "Buffer"
+                    name = "Current [B]uffer"
                 },
                 g = {
-                    name = "Git"
+                    name = "[G]it"
+                },
+                w = {
+                    name = "Save"
                 },
                 x = {
                     name = "Trouble"
+                },
+                z = {
+                    name = "Folding"
                 },
             }
         })

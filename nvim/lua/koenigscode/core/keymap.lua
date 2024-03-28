@@ -25,7 +25,7 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "Previous Location
 -- vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
 -- { desc = "Replace word under cursor" })
 
-vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true, desc = 'Switch to left window' })
-vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true, desc = 'Switch to below window' })
-vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true, desc = 'Switch to above window' })
-vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true, desc = 'Switch to right window' })
+-- vim.keymap.set('n', '<C-h>', '<C-w>h', { noremap = true, silent = true, desc = 'Switch to left window' })
+-- vim.keymap.set('n', '<C-j>', '<C-w>j', { noremap = true, silent = true, desc = 'Switch to below window' })
+-- vim.keymap.set('n', '<C-k>', '<C-w>k', { noremap = true, silent = true, desc = 'Switch to above window' })
+-- vim.keymap.set('n', '<C-l>', '<C-w>l', { noremap = true, silent = true, desc = 'Switch to right window' })

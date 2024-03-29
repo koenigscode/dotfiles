@@ -5,7 +5,8 @@ export ZSH="/Users/koenig/.oh-my-zsh"
 ZSH_THEME="nebirhos"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/powerline.omp.json)"
+#eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/huvix.omp.json)"
+eval "$(starship init zsh)"
 
 eval "$(zoxide init zsh)"
 
@@ -47,6 +48,3 @@ export GEM_HOME=/Users/koenig/.gem
 printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "zsh" }}\x9c'
 [ -f "/Users/koenig/.ghcup/env" ] && source "/Users/koenig/.ghcup/env" # ghcup-env
 
-# export PATH="$PATH:$HOME/code/bettau_cli/cmd"
-# export PROG=bettau
-# source $HOME/code/bettau_cli/autocomplete/zsh_autocomplete

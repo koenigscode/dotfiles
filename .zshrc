@@ -5,10 +5,13 @@ export ZSH="/Users/koenig/.oh-my-zsh"
 ZSH_THEME="nebirhos"
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-#eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/huvix.omp.json)"
 eval "$(starship init zsh)"
-
 eval "$(zoxide init zsh)"
+
+# create tmux session if there are none 
+if [[ ! $(tmux list-sessions) ]]; then 
+  tmux
+fi
 
 #####
 # aliases

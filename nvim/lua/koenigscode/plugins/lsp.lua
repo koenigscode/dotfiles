@@ -9,6 +9,14 @@ return {
             -- Disable automatic setup, we are doing it manually
             vim.g.lsp_zero_extend_cmp = 0
             vim.g.lsp_zero_extend_lspconfig = 0
+            -- gopls settings
+            vim.g.lsp_zero_gopls = {
+                settings = {
+                    gopls = {
+            completeUnimported = true,
+                },
+                }
+            }
         end,
     },
     {
@@ -35,6 +43,7 @@ return {
 
             cmp.setup({
                 formatting = lsp_zero.cmp_format(),
+                preselect = cmp.PreselectMode.None,
                 mapping = cmp.mapping.preset.insert({
                     ['<C-Space>'] = cmp.mapping.complete(),
                     ['<C-u>'] = cmp.mapping.scroll_docs(-4),

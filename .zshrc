@@ -3,7 +3,8 @@
 #####
 export ZSH="/Users/koenig/.oh-my-zsh"
 ZSH_THEME="nebirhos"
-plugins=(git)
+plugins=(git zsh-fzf-history-search zsh-autosuggestions)
+bindkey '^ ' autosuggest-accept # ctrl space for autosuggest accept
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
@@ -44,6 +45,25 @@ transcribe-fast() {
 translate() {
     local file="$1"
     whisper-ctranslate2 --model large-v3 --task translate --output_format srt --vad_filter True --output_dir . --word_timestamps True --max_line_width 40 --max_line_count 1 "$file"
+}
+
+tiled() {
+  local session window
+  session=$(tmux display-message -p '#S')
+  window=$(tmux display-message -p '#I')
+
+  # Split original pane horizontally (top and bottom)
+  tmux split-window -v -t ${session}:${window}.1
+
+  # Split top pane vertically (left and right)
+  tmux split-window -h -t ${session}:${window}.1
+
+  # Split bottom pane vertically (left and right)
+  tmux split-window -h -t ${session}:${window}.3
+
+  # Select top-left pane
+  tmux select-pane -t ${session}:${window}.1
+  clear
 }
 
 alias seai="source $HOME/.virtualenvs/SEAI/bin/activate && cd $HOME/code/uni/SEAI && jupyter notebook"
@@ -89,6 +109,8 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# dont activate base env by default 
+conda config --set auto_activate_base false
 
 # Added by Windsurf
 export PATH="/Users/koenig/.codeium/windsurf/bin:$PATH"
@@ -122,20 +144,3 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$PATH:/Users/koenig/.lmstudio/bin"
 # End of LM Studio CLI section
 
-tiled() {
-  local session window
-  session=$(tmux display-message -p '#S')
-  window=$(tmux display-message -p '#I')
-
-  # Split original pane horizontally (top and bottom)
-  tmux split-window -v -t ${session}:${window}.1
-
-  # Split top pane vertically (left and right)
-  tmux split-window -h -t ${session}:${window}.1
-
-  # Split bottom pane vertically (left and right)
-  tmux split-window -h -t ${session}:${window}.3
-
-  # Select top-left pane
-  tmux select-pane -t ${session}:${window}.1
-}

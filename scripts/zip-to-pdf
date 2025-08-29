@@ -57,9 +57,6 @@ for input in "${zip_files[@]}"; do
     
     setopt local_options null_glob
     
-    echo "Current directory: $(pwd)"
-    echo "Found files: $(ls -la | head -10)"
-    
     # Convert AVIF -> PNG (does nothing if none exist)
     if whence magick >/dev/null; then
         magick mogrify -format png -- *.avif(N) 2>/dev/null || true

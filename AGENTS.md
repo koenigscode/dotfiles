@@ -1,0 +1,1 @@
+You're only allowed to modify files in /scripts and the README.

@@ -1,0 +1,116 @@
+#!/bin/zsh
+
+if [[ $# -lt 2 ]]; then
+echo "Usage: zip-to-pdf <output.pdf> <zip-file1> [zip-file2] [zip-file3] ..."
+return 1
+fi
+
+local out="$1"
+shift  # Remove first argument, remaining are ZIP files
+local zip_files=("$@")
+
+# Ensure output directory exists
+local output_dir="$HOME/Desktop/output"
+mkdir -p "$output_dir"
+
+# Get just the filename without path
+local filename=$(basename "$out")
+local abs_out="$output_dir/$filename"
+
+# Create temporary directory for extraction
+local temp_dir=$(mktemp -d)
+trap "rm -rf '$temp_dir'" EXIT
+
+# Array to collect all PNG files
+local all_pngs=()
+
+set -e
+
+# Process each ZIP file
+for input in "${zip_files[@]}"; do
+    echo "Processing $input..."
+    
+    # Create subdirectory for this ZIP
+    local zip_temp="$temp_dir/$(basename "$input" .zip)"
+    mkdir -p "$zip_temp"
+    
+    # Extract ZIP file to subdirectory
+    if [[ "$input" == *.zip ]]; then
+        unzip -q "$input" -d "$zip_temp" || exit 1
+        cd "$zip_temp" || exit 1
+        
+        # Find the actual directory with images (skip __MACOSX and similar)
+        local image_dirs=(*/.(N))
+        if (( ${#image_dirs} > 0 )); then
+            # Use the first non-__MACOSX directory
+            for dir in "${image_dirs[@]}"; do
+                if [[ "$dir" != "__MACOSX"* ]]; then
+                    cd "$dir" || exit 1
+                    break
+                fi
+            done
+        fi
+    else
+        # If not a zip file, assume it's a directory
+        cd "$input" || exit 1
+    fi
+    
+    setopt local_options null_glob
+    
+    echo "Current directory: $(pwd)"
+    echo "Found files: $(ls -la | head -10)"
+    
+    # Convert AVIF -> PNG (does nothing if none exist)
+    if whence magick >/dev/null; then
+        magick mogrify -format png -- *.avif(N) 2>/dev/null || true
+    else
+        mogrify -format png -- *.avif(N) 2>/dev/null || true
+    fi
+    
+    # Also try to find existing image files (jpg, jpeg, png, webp)
+    local images=( *.png(N) *.jpg(N) *.jpeg(N) *.webp(N) )
+    
+    # Convert other formats to PNG if needed
+    for img in *.jpg(N) *.jpeg(N) *.webp(N); do
+        if [[ -f "$img" ]]; then
+            local basename="${img%.*}"
+            if whence magick >/dev/null; then
+                magick "$img" "${basename}.png" 2>/dev/null || true
+            else
+                convert "$img" "${basename}.png" 2>/dev/null || true
+            fi
+        fi
+    done
+    
+    # Collect PNGs from this ZIP and sort them numerically
+    local pngs=( *.png(N) )
+    echo "Found PNG files: ${#pngs}"
+    if (( ${#pngs} > 0 )); then
+        echo "PNG files: ${pngs[@]:0:5}..." # Show first 5 files
+        # Sort the PNGs numerically (important for proper page order)
+        pngs=($(printf '%s\n' "${pngs[@]}" | sort -V))
+        
+        # Add full paths to all_pngs array
+        for png in "${pngs[@]}"; do
+            all_pngs+=("$(pwd)/$png")
+        done
+    fi
+    
+    cd "$temp_dir"
+done
+
+# Check if we found any PNGs
+if (( ${#all_pngs} == 0 )); then
+    echo "No PNG files found after conversion."
+    exit 1
+fi
+
+# Build PDF from all collected PNGs
+echo "Creating PDF with ${#all_pngs} images..."
+if whence magick >/dev/null; then
+    magick "${all_pngs[@]}" "$abs_out" || { echo "Failed to create PDF"; exit 1; }
+else
+    convert "${all_pngs[@]}" "$abs_out" || { echo "Failed to create PDF"; exit 1; }
+fi
+
+echo "Created \"$abs_out\""

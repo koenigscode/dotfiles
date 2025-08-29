@@ -3,11 +3,14 @@
 #####
 export ZSH="/Users/koenig/.oh-my-zsh"
 ZSH_THEME="nebirhos"
-plugins=(git zsh-fzf-history-search zsh-autosuggestions)
+plugins=(git zsh-fzf-history-search zsh-autosuggestions you-should-use zsh-bat)
 bindkey '^ ' autosuggest-accept # ctrl space for autosuggest accept
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+# disable homebrew auto updates
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # create tmux session if there are none 
 if [[ ! $(tmux list-sessions) ]]; then 
@@ -20,12 +23,14 @@ fi
 alias myip="ifconfig | grep 'inet ' | grep -Fv 127.0.0.1 | awk '{print \$2}'"
 alias vim="nvim"
 alias editvim="cd ~/.config/nvim && vim ."
-alias editzsh="vim ~/.zshrc"
+alias editzsh="vim ~/.zshrc && source ~/.zshrc"
+alias edittmux="vim ~/.tmux.conf && tmux source-file ~/.tmux.conf"
 alias lg='lazygit'
 alias python='python3'
 alias love="/Applications/love.app/Contents/MacOS/love"
 alias simpleprompt="export PS1=\"$ \""
 alias cchat='make && erl -eval "cchat:server(), cchat:client(), cchat:client()."'
+alias copy="tee >(pbcopy) 2>&1"  # stdout + stderr
 
 gcc-run() {
   local filename="${1%.c}"
@@ -144,3 +149,4 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$PATH:/Users/koenig/.lmstudio/bin"
 # End of LM Studio CLI section
 
+export PATH="$PATH:/Users/koenig/dotfiles/scripts"

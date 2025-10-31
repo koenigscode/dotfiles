@@ -1,0 +1,22 @@
+maximize=true
+macos-option-as-alt = true
+
+keybind = shift+enter=text:\x1b\r
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+keybind = alt+up=unbind
+keybind = alt+down=unbind
+keybind = alt+enter=unbind
+keybind = cmd+t=unbind
+keybind = cmd+n=unbind
+keybind = cmd+c=unbind
+keybind = cmd+w=unbind
+keybind = cmd+t=unbind
+keybind = cmd+n=unbind
+keybind = cmd+c=unbind
+keybind = cmd+w=unbind
+keybind = cmd+opt+left=unbind
+keybind = cmd+opt+right=unbind
+keybind = opt+n=unbind
+keybind = ctrl+space=unbind
+

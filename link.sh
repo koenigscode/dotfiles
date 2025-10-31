@@ -6,3 +6,4 @@ cp ~/.config/ex2code .
 cp ~/.config/intellij .
 cp ~/.config/ex2intellij .
 cp ~/.tmux.conf .
+cp -r "/Users/koenig/Library/Application Support/com.mitchellh.ghostty" .

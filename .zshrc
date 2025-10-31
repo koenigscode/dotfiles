@@ -3,19 +3,21 @@
 #####
 export ZSH="/Users/koenig/.oh-my-zsh"
 ZSH_THEME="nebirhos"
-plugins=(git zsh-fzf-history-search zsh-autosuggestions you-should-use zsh-bat)
-bindkey '^ ' autosuggest-accept # ctrl space for autosuggest accept
+plugins=(git zsh-fzf-history-search zsh-autosuggestions you-should-use zsh-bat zsh-jj)
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
+
+bindkey '^[ ' autosuggest-accept 
+bindkey '^@' autosuggest-accept
 
 # disable homebrew auto updates
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # create tmux session if there are none 
-if [[ ! $(tmux list-sessions) ]]; then 
-  tmux
-fi
+# if [[ ! $(tmux list-sessions) ]]; then 
+#   tmux
+# fi
 
 #####
 # aliases
@@ -31,6 +33,7 @@ alias love="/Applications/love.app/Contents/MacOS/love"
 alias simpleprompt="export PS1=\"$ \""
 alias cchat='make && erl -eval "cchat:server(), cchat:client(), cchat:client()."'
 alias copy="tee >(pbcopy) 2>&1"  # stdout + stderr
+alias update_brew="HOMEBREW_NO_AUTO_UPDATE=1 brew update"
 
 gcc-run() {
   local filename="${1%.c}"
@@ -150,3 +153,7 @@ export PATH="$PATH:/Users/koenig/.lmstudio/bin"
 # End of LM Studio CLI section
 
 export PATH="$PATH:/Users/koenig/dotfiles/scripts"
+export EDITOR=vim
+
+export ZELLIJ_AUTO_ATTACH=true
+alias zj="zellij"
